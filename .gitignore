@@ -1,0 +1,90 @@
+# ============================================================================
+# My Brain — Public System Repository
+# The system scaffolding is public. Personal content is gitignored.
+# ============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Agent cache and generated artifacts
+.agent/cache/
+.agent/*.json
+
+# Google Drive temporary upload files
+.tmp.driveupload/
+.tmp.drivedownload/
+
+# Gemini session artifacts
+.gemini/
+
+# ============================================================================
+# Personal Content — folder structure is preserved via .gitkeep files
+# ============================================================================
+
+# Garden notes (personal knowledge IP)
+10_Garden/**/*.md
+!10_Garden/**/*_主題索引.md
+!10_Garden/**/.gitkeep
+
+# Lab entries (personal WIP writing)
+30_Lab/**/*.md
+!30_Lab/**/.gitkeep
+
+# Archived source files (copyrighted third-party PDFs/images)
+99_Archives/Assets/*
+!99_Archives/Assets/.gitkeep
+
+# Archived lab entries
+99_Archives/Lab/*
+!99_Archives/Lab/.gitkeep
+
+# Inbox raw files (transient, personal)
+00_Inbox/*
+!00_Inbox/.gitkeep
+
+# Knowledge gap reports (personal knowledge state)
+.agent/gaps/*
+!.agent/gaps/.gitkeep
+
+# Dashboard (references personal note counts)
+Dashboard.md
+
+# Writing style examples (contains identifiable personal quotes)
+.agent/writing_style_examples.md
+
+# ============================================================================
+# What IS public (for reference):
+# - CLAUDE.md, .agent/tasks/, .agent/config.py
+# - .agent/generate_indices.py, .agent/utils/, .agent/taxonomy.md
+# - .agent/user_persona.md, .agent/writing_style.md (rules only, no examples)
+# - All .gitkeep files (preserve folder structure)
+# ============================================================================

